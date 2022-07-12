@@ -1,0 +1,243 @@
+:root {
+    --rojo: rgb(112, 2, 2);
+    --fondo: rgb(17, 17, 17);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--fondo);
+    font-family: 'Open Sans', sans-serif;
+}
+
+#contenedor {
+    width: 90%;
+    margin: auto;
+}
+
+#peliprin {
+    font-size: 16px;
+    width: 100%;
+    min-height: 40.62em;
+    color: white;
+    background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0, 0, 0, .50) 100%), url(../img/horizont/unavoz.jpg);
+    background-size: cover;
+    margin-bottom: 3.12em;
+    display: flex;
+    align-items: end;
+}
+
+#peliprin #contenedor {
+    margin: 0 auto;
+    margin-bottom: 6.25em;
+}
+
+#peliprin .titulo {
+    font-weight: 600;
+    font-size: 3.12em;
+    margin-bottom: 0.4em;
+}
+
+#peliprin .descripcion {
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 1.75em;
+    max-width: 50%;
+    margin-bottom: 1.25em;
+}
+
+#peliprin #boton1,
+#peliprin #boton2 {
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 0.31em;
+    padding: 0.93em 1.87em;
+    color: #fff;
+    margin-right: 1.25em;
+    cursor: pointer;
+    transition: .3s ease all;
+    font-size: 1.12em;
+}
+
+#peliprin #boton1:hover,
+#peliprin #boton2:hover {
+    background: rgb(218, 218, 218);
+    color: var(--fondo);
+}
+
+#peliprin #boton1 i, 
+#peliprin #boton2 i {
+    margin-right: 1.25em;
+}
+
+
+
+
+
+
+.recomendadas-contenedor {
+    width: 90%;
+    margin: auto;
+}
+
+.titulo-controles {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.titulo-controles h3 {
+    color: #fff;
+    font-size: 30px;
+}
+
+.titulo-controles .indicadores button,
+.titulo-controles .indicador button {
+    background: #fff;
+    height: 3px;
+    width: 10px;
+    cursor: pointer;
+    border: none;
+    margin-right: 2px;
+}
+
+.titulo-controles .indicadores button:hover,
+.titulo-controles .indicadores button.activo,
+.titulo-controles .indicador button:hover,
+.titulo-controles .indicador button.activo {
+    background: var(--rojo);
+}
+
+
+
+
+.recomendadas-contenedor .contenedor-principal {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.recomendadas-contenedor .contenedor-principal .izquierda,
+.recomendadas-contenedor .contenedor-principal .izq,
+.recomendadas-contenedor .contenedor-principal .der,
+.recomendadas-contenedor .contenedor-principal .derecha {
+    position: absolute;
+    border: none;
+    background: rgba(0, 0, 0, 0.3);
+    font-size: 40px;
+    height: 50%;
+    top: calc(50%-25%);
+    line-height: 40px;
+    width: 50px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 500;
+    transition: .2s ease all;
+}
+
+.recomendadas-contenedor .contenedor-principal .izquierda,
+.recomendadas-contenedor .contenedor-principal .izq {
+    left: 0;
+}
+
+.recomendadas-contenedor .contenedor-principal .derecha,
+.recomendadas-contenedor .contenedor-principal .der {
+    right: 0;
+}
+
+.recomendadas-contenedor .contenedor-principal .izquierda:hover,
+.recomendadas-contenedor .contenedor-principal .izq:hover,
+.recomendadas-contenedor .contenedor-principal .der:hover,
+.recomendadas-contenedor .contenedor-principal .derecha:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+
+
+.contenedor-carrucel, .contenedor-peli-carrucel{
+    width: 100%;
+    padding: 20px 0;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.recomendadas-contenedor .peli,
+.recomendadas-contenedor .pelic {
+    min-width: 20%;
+    transition: .3s ease all;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.recomendadas-contenedor .peli.hover,.recomendadas-contenedor .pelic.hover {
+    transform: scale(1.2);
+    transform-origin: center;
+}
+
+.recomendadas-contenedor .peli img,
+.recomendadas-contenedor .pelic img {
+    width: 100%;
+    height: 200px;
+    vertical-align: top;
+}
+
+
+
+
+@media screen and (max-width: 850px) {
+    
+
+    #peliprin {
+        font-size: 14px;
+        background-position: center;
+    }
+
+    #peliprin .descripcion {
+        max-width: 100%;
+    }
+
+    .contenedor-carrucel,.contenedor-peli-carrucel {
+        overflow: visible;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .titulo-controles .indicadores,
+    .titulo-controles .indicador,
+    .recomendadas-contenedor .contenedor-principal .izquierda,
+    .recomendadas-contenedor .contenedor-principal .derecha,
+    .recomendadas-contenedor .contenedor-principal .izq,
+    .recomendadas-contenedor .contenedor-principal .der {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 550px) {
+
+    .contenedor-carrucel,.contenedor-peli-carrucel {
+        overflow: visible;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+
+    #peliprin .titulo {
+        font-weight: 450;
+        font-size: 2.64em;
+        margin-bottom: 0.3em;
+    }
+
+    #peliprin .descripcion {
+        max-width: 100%;
+    }
+
+    #peliprin #boton1,
+    #peliprin #boton2 {
+        margin-bottom: 10px;
+    }
+}

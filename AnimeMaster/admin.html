@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/cbcb6ed7b6.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Grandstander&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/admin.css">
+    <title>Anime Master</title>
+</head>
+<body>
+    <div id="pelic">
+        <h1>Pelis</h1>
+        <form id="peli">
+            <label>Foto ubicacion</label>
+            <input type="text" name="foto" placeholder="Enter foto path">
+            
+            <label>Titulo</label>
+            <input type="text" name="titulo" placeholder="Enter title">
+
+            <label>Descripcion</label>
+            <input type="text" name="descripcion" placeholder="Enter descripcion">
+
+            <label>Tipo</label>
+            <input type="text" name="tipo" placeholder="Enter Tipo">
+
+            <label>Link</label>
+            <input type="text" name="link" placeholder="Enter link">
+
+            <input type="submit" id="POST"  value="POST">
+            <input type="submit" id="DELETE" value="DELETE">
+        </form>
+    </div>    
+    <div id="seri">
+        <h1>Series</h1>
+        <form id="serie">
+            <label>Foto ubicacion</label>
+            <input type="text" name="foto" placeholder="Enter foto path">
+            
+            <label>Titulo</label>
+            <input type="text" name="titulo" placeholder="Enter title">
+
+            <label>Descripcion</label>
+            <input type="text" name="descripcion" placeholder="Enter descripcion">
+
+            <label>Tipo</label>
+            <input type="text" name="tipo" placeholder="Enter Tipo">
+
+            <label>Capitulos</label>
+            <input type="text" name="capitulos" placeholder="Enter Capitulos">
+
+            <input type="submit" class="POST2" value="POST">
+            <input type="submit" class="DELETE2" value="DELETE">
+        </form>
+    </div>
+    <script src="js/apiAdmin.js"></script>
+    
+</body>
+</html>

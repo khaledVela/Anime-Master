@@ -1,0 +1,82 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url(../img/login/banner.gif) no-repeat center top;
+    background-size: cover;
+    height: 100vh;
+}
+#login{
+    width: 320px;
+    height: 490px;
+    background: rgba(17, 17, 17, 0.747);
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 30px 30px;
+}
+
+#login h1,h2{
+    font-family: 'Bebas Neue', cursive;
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+}
+#login h1{
+    font-size: 40px;
+    font-weight: normal;
+    color: rgb(112, 2, 2);
+}
+#login h2{
+    font-size: 30px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#login label{
+    margin: 0;
+    padding: 0;
+    display: block;    
+    font-size: 25px;
+    font-family: 'Grandstander', cursive;
+}
+#login input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#login input[type="text"],input[type="password"]{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+
+#login input[type="submit"]{
+    border: none;
+    outline: none;
+    height: 40px;
+    background:rgb(112, 2, 2);
+    color: #fff;
+    font-size: 18px;
+}
+
+#login a{
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    font-size: 17px;
+    line-height: 20px;
+    color: darkgray;
+}
+#login a:hover{
+    color: white;
+}
+
+#login #error{
+    display: none;
+    color: red;
+}

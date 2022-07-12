@@ -1,0 +1,121 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url(../img/login/banner.gif) no-repeat center top;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+}
+#pelic{
+    width: 320px;
+    height: 700px;
+    background: rgba(17, 17, 17, 0.747);
+    color: #fff;
+    top: 50%;
+    left: 70%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 30px 30px;
+}
+#pelic h1{
+    font-family: 'Bebas Neue', cursive;
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: normal;
+    color: rgb(112, 2, 2);
+}
+
+#pelic label{
+    margin: 0;
+    padding: 0;
+    display: block;    
+    font-size: 25px;
+    font-family: 'Grandstander', cursive;
+}
+#pelic input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#pelic input[type="text"],input[type="password"]{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+
+#pelic input[type="submit"]{
+    border: none;
+    outline: none;
+    height: 40px;
+    background:rgb(112, 2, 2);
+    color: #fff;
+    font-size: 18px;
+}
+
+
+
+#seri{
+    width: 320px;
+    height: 700px;
+    background: rgba(17, 17, 17, 0.747);
+    color: #fff;
+    top: 50%;
+    left: 30%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 30px 30px;
+}
+#seri h1{
+    font-family: 'Bebas Neue', cursive;
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: normal;
+    color: rgb(112, 2, 2);
+}
+
+#seri label{
+    margin: 0;
+    padding: 0;
+    display: block;    
+    font-size: 25px;
+    font-family: 'Grandstander', cursive;
+}
+#seri input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#seri input[type="text"],input[type="password"]{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+
+#seri input[type="submit"]{
+    border: none;
+    outline: none;
+    height: 40px;
+    background:rgb(112, 2, 2);
+    color: #fff;
+    font-size: 18px;
+}
+
+@media  screen and (max-width: 850px) {
+    #pelic{
+        left: 70%;
+    }
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/cbcb6ed7b6.js" crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Grandstander&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/regist.css">
+    <title>Anime Master</title>
+</head>
+
+<body>
+    <header>
+        <div id="contenedor">
+            <h2 id="logo">Anime Master</h2>
+            <nav id="regis-boton">
+                <a href="index.html">Iniciar sesíon</a>
+            </nav>
+        </div>
+    </header>
+    <div id="login">
+        <h2>Peliculas y series ilimitadas y mucho más.</h2>
+        <h3>Disfruta donde quieras. Cancela cuando quieras</h3>
+        <h4>¿Quieres ver Anime Master ya? Completa los requisitos para crear una cuenta</h4>
+        <form id="formulario">
+            <label >Username</label><br>
+            <input type="text" name="fullname" placeholder="Enter Username"><br>
+            <label >Email</label><br>
+            <input type="text" name="username" placeholder="Enter Email"><br>
+            <label >Password</label><br>
+            <input type="password" name="password" placeholder="Enter password"><br>
+            <input type="submit" class="btn">
+        </form>
+        <div id="error" role="alert"></div>
+    </div>
+    <script src="js/apiUsuario.js"></script>
+</body>
+</html>

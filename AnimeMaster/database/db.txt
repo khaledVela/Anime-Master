@@ -1,0 +1,65 @@
+CREATE DATABASE database_links;
+
+use database_links;
+
+--users table
+CREATE TABLE users(
+    id INT(11) NOT NULL,
+    username VARCHAR(16) NOT NULL,
+    password VARCHAR(60) NOT NULL,
+    fullname VARCHAR(100) NOT NULL,
+    tipousuario VARCHAR(20) NOT NULL
+);
+ALTER TABLE users
+    ADD PRIMARY KEY(id);
+
+ALTER TABLE users
+    MODIFY id INT(QW11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+    
+DESCRIBE users;
+
+--peli
+CREATE TABLE peli(
+    id INT(11) NOT NULL,
+    foto VARCHAR(150) NOT NULL,
+    title VARCHAR(150) NOT NULL,
+    DESCRIPTION text,
+    tipopeli VARCHAR(20) NOT NULL
+);
+
+ALTER TABLE peli
+    ADD PRIMARY KEY(id);
+
+ALTER TABLE peli
+    MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--links tables
+CREATE TABLE links(
+    id INT(11) NOT NULL,
+    url VARCHAR(150) NOT NULL,
+    peli_id INT(11),
+    CONSTRAINT fk_peli FOREIGN key (peli_id) REFERENCES peli(id) 
+);
+
+ALTER TABLE links
+    ADD PRIMARY KEY(id);
+
+ALTER TABLE links
+    MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+DESCRIBE links;
+
+--listPeli tables
+CREATE table listPeli(
+    id INT(11) NOT NULL,
+    id_user INT(11) NOT NULL,
+    id_peli INT(11) NOT NULL,
+    CONSTRAINT fk_peli FOREIGN key (peli_id) REFERENCES peli(id) 
+    CONSTRAINT fk_users FOREIGN key (id_user) REFERENCES users(id) 
+);
+
+ALTER TABLE listPeli
+    ADD PRIMARY KEY(id);
+
+ALTER TABLE listPeli
+    MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;

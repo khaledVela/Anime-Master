@@ -1,0 +1,65 @@
+body {
+    background: var(--fondo);
+    font-family: 'Open Sans', sans-serif;
+}
+.recomendadas-contenedor {
+    width: 90%;
+    margin: auto;
+}
+
+.titulo-controles {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.titulo-controles h3 {
+    color: #fff;
+    font-size: 30px;
+}
+.contenedor-carrucel, .contenedor-carrucel{
+    width: 100%;
+    padding: 20px 0;
+    overflow: visible;
+    scroll-behavior: smooth;
+    grid-template-columns: repeat(3, 1fr);
+    display: grid;
+    gap: 20px;
+    flex-wrap: nowrap;
+}
+
+.recomendadas-contenedor .peli {
+    min-width: 20%;
+    transition: .3s ease all;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.recomendadas-contenedor .peli.hover {
+    transform: scale(1.2);
+    transform-origin: center;
+}
+
+.recomendadas-contenedor .peli img {
+    width: 100%;
+    height: 200px;
+    vertical-align: top;
+}
+
+@media screen and (max-width: 850px) {
+    
+    .contenedor-carrucel {
+        overflow: visible;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .contenedor-carrucel {
+        overflow: visible;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+}
